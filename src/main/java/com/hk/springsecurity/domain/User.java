@@ -31,8 +31,31 @@ public class User {
                 .build();
     }
 
+    public User() {
+    }
+
     public UserResponse toResponse(){
         return new UserResponse(this.name,this.email,this.role);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     private User(Builder builder) {
